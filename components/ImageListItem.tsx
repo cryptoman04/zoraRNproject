@@ -1,4 +1,4 @@
-import { UnsplashedResult } from "@/app/unsplashed";
+import { UnsplashedResult } from "@/utils/unsplashed";
 import { ListRenderItemInfo } from "@shopify/flash-list";
 import { Dimensions, Pressable, StyleSheet } from "react-native";
 import ImageDetails from "./ImageDetails";

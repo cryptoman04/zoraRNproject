@@ -20,7 +20,7 @@ const SearchBar = (props: Props) => {
             <TextInput
                 style={styles.input}
                 onChangeText={props.onChangeText}
-                placeholder="Search for an image"
+                placeholder="Search for an image 🔍"
                 onSubmitEditing={props.onSearch}
             />
 

@@ -1,51 +1,38 @@
-# Welcome to your Expo app 👋
-
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# Welcome to the Zora RN Takehome project 👋
 
 ## Get started
 
 1. Install dependencies
 
-   ```bash
-   npm install
-   ```
+    ```bash
+    npm install
+    ```
 
 2. Start the app
 
-   ```bash
-    npx expo start
-   ```
+    ```bash
+     npx expo start
+    ```
 
-In the output, you'll find options to open the app in a
+3. Be sure you are in "expo go" mode. In the terminal you should see "Using Expo Go". If you instead see "Using development build", press `s` on your keyboard. Start the iOS version of the app by pressing `i` on your keyboard.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Project Walkthrough
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+-   app - contains two pages:
 
-## Get a fresh project
+    -   index.tsx - Serves as the home page, renders the image list.
+    -   image.tsx - Is the Image detail view, renders image info along with description.
 
-When you're ready, run:
+-   components - contains re-usable components:
+    -   ImageDetails - is the component we render in the image list as well as the image detail view
+    -   ImageListItem - wraps the ImageDetails component and adds routing logic + is used within the FlashList component to render list data.
+    -   SearchBar - controlled component that handles search input.
 
-```bash
-npm run reset-project
-```
+-utils - only has unsplashed.ts for now. It contains Unsplashed types along with a simple API for searching unsplahed.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Things I could probably refactor or add in a future update:
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-# zoraRNproject
+-   Error handling - In the Images component we currently `catch` any errors from searching but we dont handle them with appropriate UI/UX.
+-   I could create a seperate ImageList component which will house any specific list related logic, right now alot of that logic lives within the root page of the app.
+-   I could create an env file to house API keys. For this project I kept things simple to avoid extra boilerplate.
+-   If the app expands in scope I could also add support for a state management library such as redux or zustand.

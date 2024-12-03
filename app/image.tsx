@@ -1,7 +1,6 @@
 import ImageDetails from "@/components/ImageDetails";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { View } from "react-native";
-import { UnsplashedResult } from "./unsplashed";
 
 const Image = () => {
     const params = useLocalSearchParams<{
@@ -11,8 +10,6 @@ const Image = () => {
         username: string;
         description: string;
     }>();
-
-    console.log("DEASCRIPOTPPPDDPDPPD", params.description);
 
     return (
         <View style={{ flex: 1 }}>

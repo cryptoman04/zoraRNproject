@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { FlashList } from "@shopify/flash-list";
 
-import { searchUnsplashed, UnsplashedResult } from "./unsplashed";
+import { searchUnsplashed, UnsplashedResult } from "../utils/unsplashed";
 import ImageListItem from "@/components/ImageListItem";
 
 const { width, height } = Dimensions.get("window");
@@ -87,7 +87,7 @@ export default function Images() {
                         }
                     }}
                     ListEmptyComponent={() => {
-                        if (showMessage) {
+                        if (showMessage === true) {
                             return (
                                 <View style={styles.listempty}>
                                     <Text>No results found 😢</Text>;
