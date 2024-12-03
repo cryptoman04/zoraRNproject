@@ -36,3 +36,4 @@
 -   I could create a seperate ImageList component which will house any specific list related logic, right now alot of that logic lives within the root page of the app.
 -   I could create an env file to house API keys. For this project I kept things simple to avoid extra boilerplate.
 -   If the app expands in scope I could also add support for a state management library such as redux or zustand.
+-   Pass more well defined props to FlashList to improve performance. For example I could pass the `estimatedListSize`, `estimatedItemSize`. Additionally I could work on improving image caching and rendering - as you'll notice when navigating from the Image list to the Image page there can sometimes be a slight flutter due to having to reload the image.
